@@ -17,6 +17,8 @@ host: `${process.env.DATABASE_HOST}`,
   },
   entities: ["dist/**/*.entity{.ts,.js}"],
   migrations: ["dist/migrations/*{.ts,.js}"],
+  seeds: ["src/database/seeding/seeds/**/*{.ts,.js}"],
+  factories: ["src/database/seeding/factories/**/*{.ts,.js}"],
   autoLoadEntities: true,
   synchronize: false, 
 }

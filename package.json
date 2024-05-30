@@ -17,7 +17,8 @@
     "migration:run": "yarn typeorm migration:run -d ./src/config/typeorm.ts",
     "migration:generate": "yarn typeorm  -d ./src/config/typeorm.ts migration:generate ./src/migrations/m",
     "migration:create": "yarn typeorm  migration:create ./src/migrations/m",
-    "migration:revert": "yarn typeorm  -d ./src/config/typeorm.ts migration:revert"
+    "migration:revert": "yarn typeorm  -d ./src/config/typeorm.ts migration:revert",
+    "seed": "ts-node src/database/seeding/seeds/seed.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -38,9 +39,11 @@
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "typeorm": "^0.3.20",
+    "typeorm-extension": "^3.5.1",
     "typeorm-seeding": "^1.6.1"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
@@ -59,7 +62,7 @@
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.3"
   },
