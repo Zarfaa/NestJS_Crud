@@ -1,7 +1,7 @@
 import { Injectable, HttpStatus, HttpException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Book } from '../database/entity/book.entity';
+import { Book } from '../entity/book.entity';
 import { BookDto } from './dto/book.dto';
 
 @Injectable()
